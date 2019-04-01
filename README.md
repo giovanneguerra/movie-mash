@@ -1,3 +1,2 @@
-This is a project to fix the knowledge of React and Redux.
-
-Made by Giovanne Guerra
+# Movie Mash
+Will write more here after the project is finished.
