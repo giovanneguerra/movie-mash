@@ -1,0 +1,23 @@
+.movie-list {
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+	align-content: space-between;
+	justify-content: space-between;
+
+	.movie {
+		width: 30%;
+		margin: 3rem 0;
+		text-align: center;
+		background-color: $color-grey-dark;
+		padding: 2rem;
+		border-radius: .5rem;
+		transition: all .3s;
+		min-height: 65rem;
+
+		&:hover {
+			background-color: lighten($color-grey-dark, 10);
+			transform: scale(1.05);
+		}
+	}
+}

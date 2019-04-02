@@ -2,6 +2,7 @@
 html {
 	font-family: 'Oswald', sans-serif;
 	color: $color-grey-light;
+	@include selection;
 }
 .logo {
 	font-weight: 300;
@@ -11,13 +12,31 @@ html {
 	@include selection;
 }
 
-.movie-list {
+.movie {
 	&__title {
 		@include selection;
 		font-size: 2.2rem;
+		padding: 1rem 0;
+		font-weight: 500;
 	}
-	&__overview {
-		font-size: 1.6rem;
+	.short-text {
+		font-size: 1.4rem;
+		font-weight: 700;
+		@include selection;
+	}
+	.readMoreText {
+		padding: 1rem;
+		color: $color-primary !important;
+		@include selection;
+	}
+}
+
+.footer {
+	&__description {
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin-top: 5rem;
+		text-align: center;
 		@include selection;
 	}
 }

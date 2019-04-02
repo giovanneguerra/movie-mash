@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import ReadMoreAndLess from 'react-read-more-less';
 import { getPopularMovies } from '../actions';
 
 class MovieList extends Component {
@@ -9,16 +10,18 @@ class MovieList extends Component {
 	render() {
 		console.log(this.props.movies);
 		return (
-			<div className='movie-list row'>
+			<div className='movie-list'>
 				{this.props.movies.movies.map((movie) => (
-					<div key={movie.id} className='col-1-of-3'>
+					<div key={movie.id} className='movie'>
 						<img
-							className='movie-list__image'
+							className='movie__image'
 							alt={movie.title}
 							src={`http://image.tmdb.org/t/p/w185//${movie.poster_path}`}
 						/>
-						<h3 className='movie-list__title'>{movie.title}</h3>
-						<p className='movie-list__overview'>{movie.overview}</p>
+						<h3 className='movie__title'>{movie.title}</h3>
+						<ReadMoreAndLess className='movie__overview'>
+							{movie.overview}
+						</ReadMoreAndLess>
 					</div>
 				))}
 			</div>
