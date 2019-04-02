@@ -1,4 +1,4 @@
-import { GET_POPULAR_MOVIES, GET_MOVIE_IMAGE } from '../actions/types';
+import { GET_POPULAR_MOVIES } from '../actions/types';
 
 const INITIAL_STATE = {
 	movies : []
@@ -10,11 +10,6 @@ export default function users(state = INITIAL_STATE, action) {
 			return {
 				...state,
 				movies : action.payload
-			};
-		}
-		case GET_MOVIE_IMAGE: {
-			return {
-				...state
 			};
 		}
 		default: {

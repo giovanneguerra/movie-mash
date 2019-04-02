@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
+html {
+	font-family: 'Oswald', sans-serif;
+	color: $color-grey-light;
+}
+.logo {
+	font-weight: 300;
+	font-size: 8rem;
+	color: $color-primary;
+	text-align: center;
+	@include selection;
+}
+
+.movie-list {
+	&__title {
+		@include selection;
+		font-size: 2.2rem;
+	}
+	&__overview {
+		font-size: 1.6rem;
+		@include selection;
+	}
+}

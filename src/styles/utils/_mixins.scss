@@ -1,0 +1,14 @@
+@mixin selection {
+	&::selection {
+		background-color: $color-primary;
+		color: $color-grey-light;
+	}
+}
+
+@mixin clearfix {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
