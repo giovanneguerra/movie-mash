@@ -1,7 +1,8 @@
-import { GET_POPULAR_MOVIES } from '../actions/types';
+import { GET_POPULAR_MOVIES, GET_MOVIE_DETAILS } from '../actions/types';
 
 const INITIAL_STATE = {
-	movies : []
+	movies : [],
+	movie  : null
 };
 
 export default function users(state = INITIAL_STATE, action) {
@@ -10,6 +11,12 @@ export default function users(state = INITIAL_STATE, action) {
 			return {
 				...state,
 				movies : action.payload
+			};
+		}
+		case GET_MOVIE_DETAILS: {
+			return {
+				...state,
+				movie : action.payload
 			};
 		}
 		default: {
